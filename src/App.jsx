@@ -10,7 +10,6 @@ import { useEffect, useState } from 'react';
 export default function App() {
   const [user, setUser] = useState(null);
 
-  // Ambil user dari localStorage saat pertama kali load
   useEffect(() => {
     const saved = localStorage.getItem('auth');
     if (saved) setUser(JSON.parse(saved));
